@@ -28,8 +28,27 @@
 ```
 
 
+<div dir="rtl">
+با اضافه کردن این خط این مشکل حل می شود
 
+transactionHistory.addAll(transactions);
+</div>
 
+```java
+public static int calculateBalance(List<Transaction> transactions) {
+        transactionHistory.addAll(transactions);
+        int balance = 0;
+        for (Transaction t : transactions) {
+            if (t.getType() == TransactionType.DEPOSIT) {
+                balance += t.getAmount();
+            } else if (t.getType() == TransactionType.WITHDRAWAL) {
+                balance -= t.getAmount();
+            }
+
+        }
+        return balance;
+    }
+```
 
 
 
