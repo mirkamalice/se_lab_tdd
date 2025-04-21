@@ -87,7 +87,7 @@ public class AccountBalanceCalculatorTest {
 
         int balance2 = AccountBalanceCalculator.calculateBalance(AccountBalanceCalculator.getTransactionHistory());
 
-        assertEquals(150, balance);
+        assertEquals(150, balance2);
     }
 
 
